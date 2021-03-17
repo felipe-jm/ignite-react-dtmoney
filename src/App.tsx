@@ -1,1 +1,3 @@
-export const App = () => <h1>Hello world</h1>;
+import { GlobalStyle } from "./styles/global";
+
+export const App = () => <GlobalStyle />;
