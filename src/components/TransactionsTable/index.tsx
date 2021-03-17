@@ -11,7 +11,6 @@ export const TransactionsTable = () => (
           <th>Data</th>
         </tr>
       </thead>
-
       <tbody>
         <tr>
           <td>Desenvolvimento</td>
