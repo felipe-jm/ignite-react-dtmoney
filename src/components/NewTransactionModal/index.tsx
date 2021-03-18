@@ -27,15 +27,22 @@ export const NewTransactionModal = ({
   const [category, setCategory] = useState("");
   const [type, setType] = useState<"deposit" | "withdraw">("deposit");
 
-  function handleCreateNewTransaction(event: React.FormEvent) {
+  async function handleCreateNewTransaction(event: React.FormEvent) {
     event.preventDefault();
 
-    createTransaction({
+    await createTransaction({
       title,
       amount: amount,
       category,
       type,
     });
+
+    setTitle("");
+    setAmount(0);
+    setCategory("");
+    setType("deposit");
+
+    onRequestClose();
   }
 
   return (
